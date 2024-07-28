@@ -1,6 +1,6 @@
-# Family Golf Clone
+# Sidcup Family Golf Clone
 
-This project is a clone of the Family Golf website, designed to provide a similar look and feel to the original site.I created this clearly for education purpose. It showcases various features and design elements of the Family Golf website, built using modern web technologies.
+This project is a clone of the Sidcup Family Golf website(https://sidcup-family-golf-one.vercel.app/), designed to provide a similar look and feel to the original site.I created this clearly for education purpose. It showcases various features and design elements of the Sidcup Family Golf website, built using modern web technologies.
 
 ## Table of Contents
 
