@@ -1,0 +1,437 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+html,body{
+    height:100%;
+    width:100%;
+    color: white;
+    /* cursor: none; */
+}
+*::selection{
+    background-color: #fff;
+    color:#95C11E;
+}
+body::-webkit-scrollbar{
+    display: block;
+    width: 8px;
+    background-color: #95C11E;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 50px;
+}
+#nav{
+    height:140px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding:0 120px;
+    gap: 47px;
+    position: fixed;
+    z-index: 99;
+}
+#nav img{
+    height: 69px;
+}
+#nav h4{
+    font-size: 18px;
+    font-weight: 500;
+}
+#nav h4:hover{
+    color: #95C11E;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 20;
+    transform: translate(0px,0px);
+    transition: 0.1s;
+}
+#cursor-blur{
+    height: 450px;
+    width: 450px;
+    background-color: #96c11e3c;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 1;
+    transition:0.2s ease;
+}
+video{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+   position: relative;
+   background: rgba(0, 0, 0, 0.423);
+}
+#page1{
+    height: 100vh;
+    width:100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 115px;
+    font-weight: 900;
+    position: relative;
+}
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position:absolute;
+    color: black;
+    top: -6px;
+    left: -5px;
+    -webkit-text-stroke:2px #95C11E;
+    z-index: -1;
+}
+#page1 h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 900;
+}
+#page1 p{
+    font-size: 18px;
+    font-weight: 500;
+    width: 39%;
+    
+}
+#page1 #arrow{
+    background-color: transparent;
+    height: 250px;
+    width: 250px;
+    border:2px solid #95C11E;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left:-2%;
+    bottom:-2px;
+    transition: transform 0.3s ease ;
+}
+#arrow i{
+    font-size: 50px;
+    transition: transform 0.3s ease ;
+}
+#page1 #arrow:hover{
+  transform: scale(0.5);
+  background-color: #95C11E;
+}
+#arrow i:hover{
+    transform: scale(0.5);
+}
+
+/* *::selection {
+    background-color: #fff;
+    color: #95c11e;
+} */
+
+#page2{
+    min-height: 100vh;
+    width:100%;
+    z-index: 10;
+}
+#scroller{
+    white-space: nowrap;
+    z-index: 10;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in{
+    
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 10;
+}
+
+#scroller-in h4{
+    display: inline-block;
+    position: relative;
+    font-size:120px;
+    font-weight: 700;
+    font-family:initial;
+    margin-right: 10px;
+    -webkit-text-stroke: 2px #fff;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    color: #000;
+    z-index: 10;
+}
+#scroller-in h4:hover{
+    color: #95C11E;
+    -webkit-text-stroke: #95C11E;
+    
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+/* @keyframes scroll{
+    from{
+        transform: translate3d();
+    }
+    to{
+        transform: translateX(-100%);
+    }
+} */
+
+
+#about-us{
+    height:40vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 95px;
+    z-index: 99;
+}
+#about-us img{
+    height: 220px;
+    width: 220px;
+    border-radius: 25px;
+    object-fit: cover;
+    z-index: 10;
+}
+#about-us-in {
+    width:54%;
+    text-align: center;
+    z-index: 10;
+}
+#about-us-in h3{
+    font-size: 55px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+#about-us-in p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    
+}
+#cards-container{
+    height:60vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    position: relative;
+    z-index: 10;
+    /* background-color: rgb(235, 18, 32); */
+}
+.card{
+    height:65%;
+    width:19%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 10;
+    transition: all ease 0.6s;
+}
+#card1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.overlay{
+    height: 100%;
+    width:100%;
+    background-color: #95C11E;
+    padding: 30px;
+    padding-top: 100px;
+    color: #000;
+    opacity: 0;
+    transition: all ease 0.6s;
+    z-index: 10;
+}
+.overlay h4{
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.overlay p{
+    height: 20%;
+    font-size: 14px;
+    font-weight: 400;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+#green{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right top,#95C11E,#119f3a);
+
+}
+#green h4{
+    font-size: 27px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000;
+    width: 40%;
+    line-height: 50px;
+    text-align: center;
+}
+#green img{
+    height: 100%;
+    object-fit: cover;
+    width:14%;
+}
+#page3{
+    height:100vh;
+    width:100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page3>p{
+    width:60%;
+    line-height: 45px;
+    font-size: 35px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+#page3>img{
+    position: absolute;
+    height: 60px;
+}
+#page3 #col1{
+    left:15%;
+    top:25%;
+}
+#page3 #col2{
+    right:15%;
+    bottom:30%;
+}
+#page4{
+    height: 30vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+.elem{
+    height:70%;
+    width:26%;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.elem h2{
+    height: 100%;
+    width: 100%;
+    color:#000;
+    background-color: #95C11E;
+    transition: all ease 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    font-size: 30px;
+    font-weight: 800;
+    border-radius: 20px;
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    transition: all ease 0.5s;
+    object-fit: cover;
+    scale:1.1;
+}
+.elem:hover h2{
+    color:#fff;
+    background-color: transparent;
+}
+.elem:hover img{
+    scale:1;
+}
+#page4 h1{
+    font-size: 98px;
+    font-weight: 900;
+    position: absolute;
+    top: -15%;
+    font-family: initial;
+    -webkit-text-stroke: 2px #fff;
+    color: #000;
+}
+#footer{
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to right top,#95C11E ,#119f3a );
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    padding-left: 100px;
+}
+#footer>img{
+    position: absolute;
+    left:0;
+    height: 100%;
+    object-fit: cover;
+}
+#f1 img{
+    height: 100px;
+}
+#f2 h2{
+    font-size: 25px;
+    width:fit-content;
+    font-weight: 900;
+    color:#000;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+#f3 h2{
+    font-size: 25px;
+    width:fit-content;
+    font-weight: 800;
+    color:#000;
+    line-height: 38px;
+    text-transform: uppercase;
+}
